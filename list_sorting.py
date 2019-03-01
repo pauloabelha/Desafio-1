@@ -12,38 +12,38 @@ def sorter(lista):
   counter2 = 0
 
   while counter == False:
-    print "9: counter2 == %s, posy2 == %s" % (counter2, posy2)
+    print("9: counter2 == %s, posy2 == %s".format(counter2, posy2))
     if posy2 >= (len(lista) - 1):
-        print "1: started reseting"
+        print("1: started reseting")
         posx2 = 0
         posy2 = 0
         x = 0
         y = 1
         counter2 += 1
-        print "2: %s %s %s %s" % (x, y, posx2, posy2)
+        print("2: %s %s %s %s".format(x, y, posx2, posy2))
         if counter2 == 10:
             counter = True
         else:
             counter = False
     else:
-      print "3: standard"
+      print("3: standard")
       x = lista[0 + posx2]
       y = lista[1 + posy2]
-      print "4: %s, %s" % (x, y)
+      print("4: %s, %s".format(x, y))
       if x > y:
-        print "5: %s" % (lista)
+        print("5: %s".format(lista))
         inverter(x, y, lista)
         posx2 = posx2 + 1
         posy2 = posy2 + 1
-        print "6: x > y == %s" % (lista)
+        print("6: x > y == %s".format(lista))
         continue
       elif x < y:
-        print "7: x < y"
+        print("7: x < y")
         posx2 += 1
         posy2 += 1
-        print "8: list == %s" % (lista)
+        print("8: list == %s".format(lista))
         continue
-  print lista
+  print(lista)
 
 
 def inverter(x, y, lista):
